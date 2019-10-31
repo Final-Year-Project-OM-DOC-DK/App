@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public afAuth: AngularFireAuth) {}
+
+  //function for sign out button. Reloads page once user is logged out
+  signOut(){
+    this.afAuth.auth.signOut().then(() =>{
+      location.reload;
+    });
+  }
 
 }

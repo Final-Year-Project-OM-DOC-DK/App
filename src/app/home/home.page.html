@@ -1,14 +1,18 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Gaff App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <!--fireabse UI-->
+  <firebase-ui></firebase-ui>
+
+  <!--current user object is null if user is logged out, ng if displays is a user is logged in-->
+  <h1 *ngIf="afAuth.auth.currentUser">
+    Welcome {{afAuth.auth.currentUser.displayName}}!</h1>
+
+  <ion-button *ngIf="afAuth.auth.currentUser" (click)="signOut()">Sign Out</ion-button>
 </ion-content>
