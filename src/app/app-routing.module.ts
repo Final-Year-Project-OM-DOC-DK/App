@@ -7,7 +7,11 @@ const routes: Routes = [
   { path: 'terms', loadChildren: './terms/terms.module#TermsPageModule' },
   { path: 'privacy', loadChildren: './privacy/privacy.module#PrivacyPageModule' },
   { path: 'house-select', loadChildren: './house-select/house-select.module#HouseSelectPageModule' },
-  { path: 'list-house', loadChildren: './list-house/list-house.module#ListHousePageModule' },
+  { path: 'todolist', loadChildren: './todolist/todolist.module#TodolistPageModule' },
+  { path: 'calander', loadChildren: './calander/calander.module#CalanderPageModule' },
+  { path: 'forum', loadChildren: './forum/forum.module#ForumPageModule' },
+  { path: 'shoppinglist', loadChildren: './shoppinglist/shoppinglist.module#ShoppinglistPageModule' },
+  { path: 'bills', loadChildren: './bills/bills.module#BillsPageModule' },
 ];
 
 @NgModule({
