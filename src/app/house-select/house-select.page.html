@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>houseSelect</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <p>this is the house select page</p>
+
+  <ion-list>
+      <ion-list-header> <ion-label>Select House</ion-label> </ion-list-header>
+  
+        <ion-item
+          tappable
+          *ngFor="let h of house"
+          routerLink="/listHouse/{{house}}">
+        </ion-item>
+        <ion-label>
+          <h2>{{house}}</h2>
+        </ion-label>
+
+      </ion-list>
+
+</ion-content>

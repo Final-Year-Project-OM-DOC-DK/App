@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { NavController } from '@ionic/angular';
+import { HouseSelectPageModule } from '../house-select/house-select.module';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +10,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class HomePage {
 
-  constructor(public afAuth: AngularFireAuth) {}
+  constructor(public afAuth: AngularFireAuth,
+              public navCtrl: NavController) {}
 
   //function for sign out button. Reloads page once user is logged out
   signOut(){
@@ -16,5 +19,11 @@ export class HomePage {
       location.reload;
     });
   }
+
+  goToSelectHousePage(){
+    this.navCtrl.navigateForward('house-select');
+  }
+
+
 
 }

@@ -16,5 +16,11 @@
   <h1 *ngIf="afAuth.auth.currentUser">
     Welcome {{afAuth.auth.currentUser.displayName}}!</h1>
 
+  <h1>This is the home.page.html</h1>
+
+  <!--sign out button and select house button only appear when a user is logged in / via *ngIF-->
   <ion-button *ngIf="afAuth.auth.currentUser" (click)="signOut()">Sign Out</ion-button>
+  <br>
+  <ion-button *ngIf="afAuth.auth.currentUser" (click)="goToSelectHousePage()">Select House</ion-button>
+
 </ion-content>
