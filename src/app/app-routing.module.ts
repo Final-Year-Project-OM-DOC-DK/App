@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'terms', loadChildren: './terms/terms.module#TermsPageModule' },
   { path: 'privacy', loadChildren: './privacy/privacy.module#PrivacyPageModule' },
   { path: 'house-select', loadChildren: './house-select/house-select.module#HouseSelectPageModule' },
+  { path: 'house-select:id', loadChildren: './house-select/house-select.module#HouseSelectPageModule' },
   { path: 'todolist', loadChildren: './todolist/todolist.module#TodolistPageModule' },
   { path: 'calander', loadChildren: './calander/calander.module#CalanderPageModule' },
   { path: 'forum', loadChildren: './forum/forum.module#ForumPageModule' },

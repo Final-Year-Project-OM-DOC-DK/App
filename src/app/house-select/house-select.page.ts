@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { Observable } from 'rxjs';
+
+import { House, HouseService } from 'src/app/Services/house.service';
+
 
 @Component({
   selector: 'app-house-select',
@@ -7,9 +12,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HouseSelectPage implements OnInit {
 
-  constructor() { }
+  private houses: Observable<House[]>;
+
+  constructor(public navCtrl: NavController,
+              private houseService: HouseService) { }
 
   ngOnInit() {
+    this.houses = this.houseService.getHouses();
   }
 
 }
