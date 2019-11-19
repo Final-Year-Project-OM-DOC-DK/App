@@ -67,6 +67,7 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide : FirestoreSettingsToken, useValue: {}}
   ],
   bootstrap: [AppComponent]
 })
