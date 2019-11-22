@@ -1,9 +1,6 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-back-button text="back" icon="arrow-round-back"></ion-back-button>
-        </ion-buttons>
-    <ion-title slot="start">houseSelect</ion-title>
+    <ion-title>houseSelect</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,18 +9,9 @@
   <ion-list>
     <!--has to be async in order to deal with observables-->
     <!--router link to be used to navigate to next page once house is clicked-->
-    <ion-item button *ngFor="let house of (houses | async)" [routerLink]="['/sidebar:id']">
+    <ion-item button *ngFor="let house of (houses | async)" [routerLink]="['/house', house.id]">
       {{ house.name }}
     </ion-item>
   </ion-list>
 
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar color="success">
-    <ion-button expand="full" fill="clear" color="light" [routerLink]="['/add']">
-      <ion-icon name="add" slot="start"></ion-icon>
-      Add House
-    </ion-button>
-  </ion-toolbar>
-</ion-footer>

@@ -13,8 +13,8 @@ const routes: Routes = [
   { path: 'forum', loadChildren: './forum/forum.module#ForumPageModule' },
   { path: 'shoppinglist', loadChildren: './shoppinglist/shoppinglist.module#ShoppinglistPageModule' },
   { path: 'bills', loadChildren: './bills/bills.module#BillsPageModule' },
-  { path: 'sidebar', loadChildren: './sidebar/sidebar.module#SidebarPageModule' },
-  { path: 'sidebar:id', loadChildren: './sidebar/sidebar.module#SidebarPageModule' },
+  //{ path: 'sidebar', loadChildren: './sidebar/sidebar.module#SidebarPageModule' },
+  //{ path: 'sidebar:id', loadChildren: './sidebar/sidebar.module#SidebarPageModule' },
 ];
 
 @NgModule({
