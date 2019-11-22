@@ -14,6 +14,15 @@ export class HouseSelectPage implements OnInit {
 
   private houses: Observable<House[]>;
 
+<<<<<<< HEAD
+=======
+  house: House ={
+    id:'',
+    name: '',
+    members: [],
+  };
+
+>>>>>>> parent of bd06ea5... ossian update
   constructor(public navCtrl: NavController,
               private houseService: HouseService) { }
 
