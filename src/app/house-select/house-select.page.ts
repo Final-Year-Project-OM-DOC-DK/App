@@ -21,7 +21,9 @@ export class HouseSelectPage implements OnInit {
   house: House ={
     id:'',
     name: '',
-    members: [],
+    address: '',
+    eircode: '',
+    members: []
   };
 
   constructor(public navCtrl: NavController,

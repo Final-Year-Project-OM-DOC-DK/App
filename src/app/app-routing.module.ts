@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'bills', loadChildren: './bills/bills.module#BillsPageModule' },
   { path: 'sidebar', loadChildren: './sidebar/sidebar.module#SidebarPageModule' },
   { path: 'sidebar:id', loadChildren: './sidebar/sidebar.module#SidebarPageModule' },
+  { path: 'add', loadChildren: './add/add.module#AddPageModule' },
 ];
 
 @NgModule({
