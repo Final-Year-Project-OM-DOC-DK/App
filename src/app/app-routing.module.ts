@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'sidebar', loadChildren: './sidebar/sidebar.module#SidebarPageModule' },
   { path: 'sidebar:id', loadChildren: './sidebar/sidebar.module#SidebarPageModule' },  { path: 'todolist', loadChildren: './todolist/todolist.module#TodolistPageModule' },
 
+<<<<<<< HEAD
 ];
 
 @NgModule({
@@ -25,3 +26,29 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+=======
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
+  { path: 'terms', loadChildren: './terms/terms.module#TermsPageModule' },
+  { path: 'privacy', loadChildren: './privacy/privacy.module#PrivacyPageModule' },
+  { path: 'house-select', loadChildren: './house-select/house-select.module#HouseSelectPageModule' },
+  { path: 'house-select:id', loadChildren: './house-select/house-select.module#HouseSelectPageModule' },
+  { path: 'todolist', loadChildren: './todolist/todolist.module#TodolistPageModule' },
+  { path: 'calander', loadChildren: './calander/calander.module#CalanderPageModule' },
+  { path: 'forum', loadChildren: './forum/forum.module#ForumPageModule' },
+  { path: 'shoppinglist', loadChildren: './shoppinglist/shoppinglist.module#ShoppinglistPageModule' },
+  { path: 'bills', loadChildren: './bills/bills.module#BillsPageModule' },
+  { path: 'sidebar', loadChildren: './sidebar/sidebar.module#SidebarPageModule' },
+  { path: 'sidebar:id', loadChildren: './sidebar/sidebar.module#SidebarPageModule' },
+  { path: 'add', loadChildren: './add/add.module#AddPageModule' },
+];
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+  ],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+>>>>>>> bd06ea5c90860e1a3b5d325300aba80e86313686

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button text="back" icon="arrow-round-back"></ion-back-button>
+        </ion-buttons>
+    <ion-title slot="start">Add House</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <!--Form to input data, passes to functions that set inputs to variables, to be used as parameters for the AddHouse() function-->
+    <form (ngSubmit)="onAddHouse()" #houseForm="ngForm">
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">House Name<ion-text color="danger"></ion-text></ion-label>
+          <ion-input required type="text" name="name" ngModel #name="ngModel"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">House Address<ion-text color="danger"></ion-text></ion-label>
+          <ion-input required type="text" name="address" ngModel #address="ngModel"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">House Eircode<ion-text color="danger"></ion-text></ion-label>
+          <ion-input required type="text" name="eircode" ngModel #eircode="ngModel"></ion-input>
+        </ion-item>
+
+
+
+      </ion-list>
+    </form>
+  </ion-card>
+
+  <ion-footer>
+      <ion-toolbar color="success">
+        <ion-button (click)="onAddHouse(ngForm)" expand="full" fill="clear" color="light">
+          <ion-icon name="add" slot="start"></ion-icon>
+          Add House
+        </ion-button>
+      </ion-toolbar>
+    </ion-footer>
+
+</ion-content>

@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>houseSelect</ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button text="back" icon="arrow-round-back"></ion-back-button>
+        </ion-buttons>
+    <ion-title slot="start">houseSelect</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,7 +21,7 @@
 
 <ion-footer>
   <ion-toolbar color="success">
-    <ion-button expand="full" fill="clear" color="light" (click)="addHouse()">
+    <ion-button expand="full" fill="clear" color="light" [routerLink]="['/add']">
       <ion-icon name="add" slot="start"></ion-icon>
       Add House
     </ion-button>
